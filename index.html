@@ -2,42 +2,18 @@
 <html lang="ru" xml:lang="ru">
 <meta charset="UTF-8">
 <body>
-    <p>Please follow <a href="https://www.w3docs.com">this link</a>.</p>
-    
-<button style="width:100%;height:100%;font-size: 200px;" autofocus=True onclick="myFunction()" lang="ua">Копіювати</button>
+<button style="width:100%;height:100%;font-size: 100px;" autofocus=True onclick="myFunction()" lang="ua">Копіювати</button>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <input style="width:1%;height:1%;font-size: 1px;" type="text" value="5355082014177446" id="myInput">
 <script>
-valueOnWebpage = browser.tabs.query({active: true, currentWindow: true})
-        .then(updateLabelInPopup)
-        .catch(printError);
-
-function updateLabelInPopup(tabs) {
-browser.tabs.sendMessage(tabs[0].id, {command: "getValueFromWebpage"})
-            .then(function (result) {
-                console.log("Result: " + result); // this is logging `"Result: undefined"`
-                document.getElementById("id-of-element-in-popup").innerHTML = result;
-            }).catch(function (err) {
-                console.log("ERROR: ", err);
-            });
-
-}
-browser.runtime.onMessage.addListener((message) => {
-    if (message.command === "getValueFromWebpage") {
-        valueFromPage = getValueFromWebpage();
-        return Promise.resolve(valueFromPage);
-    } else {
-        return "Not a recognized command";
-    }
-});
 
 function myFunction() {
     var copyText = document.getElementById("myInput");
     copyText.select();
     copyText.setSelectionRange(0, 99999)
     document.execCommand("copy");
-    window.postMessage("testtext")
-    window.close()
+    window.postMessage("testtext","*")
+//     window.close()
     // alert("Copied the text: " + copyText.value);
 }
 </script>
