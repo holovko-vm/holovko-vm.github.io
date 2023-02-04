@@ -11362,7 +11362,7 @@ video{
 
 @media (pointer: coarse) and (hover: none) {
   body {
-    background: rgba(var(--bs-light-rgb);
+    background:  #ffffff no-repeat center center scroll;
   }
 
   body video {
