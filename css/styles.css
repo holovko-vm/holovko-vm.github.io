@@ -7313,6 +7313,7 @@ textarea.form-control-lg {
 .my-3 {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
+  z-index: 2;
 }
 
 .my-4 {
@@ -23079,6 +23080,7 @@ p {
   font-size: 2.5rem;
   margin-top: 0;
   margin-bottom: 1rem;
+  z-index: 2;
 }
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
