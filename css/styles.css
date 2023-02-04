@@ -19056,6 +19056,7 @@ textarea.form-control-lg {
 .my-3 {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
+  z-index: 2;
 }
 
 .my-4 {
@@ -23500,6 +23501,7 @@ section#contact {
 }
 section#contact .section-heading {
   color: #fff;
+  z-index: 2;
 }
 section#contact form#contactForm .form-group {
   margin-bottom: 1.5rem;
